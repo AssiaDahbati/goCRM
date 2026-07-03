@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoCRM — Piloter votre entreprise depuis un seul écran</title>
+  <meta name="description" content="GoCRM, la plateforme CRM + ERP tout-en-un pour PME et freelances. Manage. Grow. Succeed." />
+
+  <!-- Open Graph / social share preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="GoCRM" />
+  <meta property="og:title" content="GoCRM — Piloter votre entreprise depuis un seul écran" />
+  <meta property="og:description" content="La plateforme CRM + ERP tout-en-un pour PME et freelances. Manage. Grow. Succeed." />
+  <meta property="og:image" content="logo.png" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="GoCRM — Manage Grow Succeed" />
+  <meta name="twitter:description" content="La plateforme CRM + ERP tout-en-un pour PME et freelances." />
+  <meta name="twitter:image" content="logo.png" />
+  <meta name="theme-color" content="#011134" />
+
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- =================== GROWTH SPINE =================== -->
+  <!-- Signature device: the logo's ascending arrow, made structural. A fixed vertical
+       line fills bottom-to-top as the visitor scrolls through the page — the arrow
+       "climbs" the further you go. Pure CSS via animation-timeline: scroll(root);
+       progressive enhancement, degrades to a quiet static track otherwise. -->
+  <div class="growth-spine" aria-hidden="true">
+    <div class="growth-spine-fill"></div>
+  </div>
+
+  <!-- =================== NAV =================== -->
+  <!--
+    CSS-only mobile nav: uses the :checked checkbox hack.
+    A hidden <input type="checkbox"> toggles the .nav-menu visibility on small screens.
+  -->
+  <header class="site-header">
+    <nav class="nav container" aria-label="Navigation principale">
+      <a class="brand" href="#top" aria-label="GoCRM — accueil">
+        <img src="logo.png" alt="GoCRM" class="brand-logo" />
+      </a>
+
+      <input type="checkbox" id="nav-toggle" class="nav-toggle-input" aria-hidden="true" />
+      <label for="nav-toggle" class="nav-toggle" aria-label="Ouvrir le menu">
+        <span></span><span></span><span></span>
+      </label>
+
+      <ul class="nav-menu">
+        <li><a href="#pourquoi">Pourquoi GoCRM</a></li>
+        <li><a href="#modules">Modules</a></li>
+        <li><a href="#apercu">Aperçu</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a class="btn btn-primary btn-sm" href="#cta">Demander une démo</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- =================== HERO =================== -->
+    <section class="hero">
+      <div class="glow glow-a" aria-hidden="true"></div>
+      <div class="glow glow-b" aria-hidden="true"></div>
+
+      <div class="container">
+        <div class="hero-top">
+          <span class="pill">
+            <span class="pill-dot"></span> CRM + ERP · Sans complexité
+          </span>
+        </div>
+
+        <p class="hero-kicker">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17L17 4M17 4H9M17 4v8" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Manage · Grow · Succeed
+        </p>
+        <h1 class="hero-h1">Piloter votre entreprise depuis un seul écran.</h1>
+
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="hero-lead">
+              GoCRM réunit vos ventes, votre facturation, votre inventaire et vos projets
+              dans une seule plateforme claire — pensée pour les PME et les freelances,
+              sans équipe IT dédiée.
+            </p>
+
+            <div class="hero-ctas">
+              <a href="#cta" class="btn btn-primary">
+                Demander une démo
+                <svg viewBox="0 0 24 24" class="btn-arrow" aria-hidden="true"><path d="M5 19L19 5M19 5H8M19 5v11" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <a href="#modules" class="btn btn-ghost">Explorer les modules</a>
+            </div>
+
+            <ul class="hero-stats" role="list">
+              <li><strong>10</strong><span>modules intégrés</span></li>
+              <li><strong>1</strong><span>plateforme unique</span></li>
+              <li><strong>0</strong><span>tableur nécessaire</span></li>
+            </ul>
+          </div>
+
+          <!-- CSS-only dashboard mock — a supporting glimpse, not the hero's main character -->
+          <div class="hero-dash" aria-hidden="true">
+            <div class="dash-card dash-main">
+              <div class="dash-head">
+                <div class="dash-title">
+                  <span class="dot dot-live"></span>
+                  Tableau de bord
+                </div>
+                <div class="dash-tabs">
+                  <span class="tab active">Aujourd'hui</span>
+                  <span class="tab">7j</span>
+                  <span class="tab">30j</span>
+                </div>
+              </div>
+
+              <div class="dash-kpis">
+                <div class="kpi">
+                  <span class="kpi-label">Revenus</span>
+                  <span class="kpi-value">128 450 <em>DH</em></span>
+                  <span class="kpi-trend up">
+                    <svg viewBox="0 0 24 24"><path d="M4 20L20 4M20 4H10M20 4v10" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+                    +18,2%
+                  </span>
+                </div>
+                <div class="kpi">
+                  <span class="kpi-label">Prospects convertis</span>
+                  <span class="kpi-value">64</span>
+                  <span class="kpi-trend up">
+                    <svg viewBox="0 0 24 24"><path d="M4 20L20 4M20 4H10M20 4v10" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+                    +9,4%
+                  </span>
+                </div>
+              </div>
+
+              <!-- Ascending line chart (signature motif) built with clip-path -->
+              <div class="chart">
+                <div class="chart-grid">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+                <div class="chart-area"></div>
+                <div class="chart-line"></div>
+                <div class="chart-dot"></div>
+              </div>
+            </div>
+
+            <div class="dash-card dash-side">
+              <div class="side-title">Projets en cours</div>
+              <div class="project-row"><span>Migration ERP</span><span>72%</span></div>
+              <div class="bar"><div class="bar-fill" style="--w:72%"></div></div>
+              <div class="project-row"><span>Refonte catalogue</span><span>45%</span></div>
+              <div class="bar"><div class="bar-fill" style="--w:45%"></div></div>
+              <div class="project-row"><span>Campagne Q3</span><span>88%</span></div>
+              <div class="bar"><div class="bar-fill" style="--w:88%"></div></div>
+            </div>
+
+            <div class="dash-card dash-badge">
+              <div class="badge-icon">
+                <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div>
+                <div class="badge-title">Facture #2041 payée</div>
+                <div class="badge-sub">il y a 2 min · 4 800 DH</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== MARQUEE =================== -->
+    <!-- Pure CSS infinite scroll: content duplicated once, translateX(-50%) loops seamlessly. -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span>Tableau de bord</span><span class="msep">✦</span>
+        <span>Commercial</span><span class="msep">✦</span>
+        <span>Clients &amp; abonnements</span><span class="msep">✦</span>
+        <span>Projets &amp; tâches</span><span class="msep">✦</span>
+        <span>Gestion des affiliés</span><span class="msep">✦</span>
+        <span>Ventes omnicanal</span><span class="msep">✦</span>
+        <span>Inventaire</span><span class="msep">✦</span>
+        <span>Rapports</span><span class="msep">✦</span>
+        <span>Utilitaires</span><span class="msep">✦</span>
+        <span>Support &amp; prospects</span><span class="msep">✦</span>
+        <span>Tableau de bord</span><span class="msep">✦</span>
+        <span>Commercial</span><span class="msep">✦</span>
+        <span>Clients &amp; abonnements</span><span class="msep">✦</span>
+        <span>Projets &amp; tâches</span><span class="msep">✦</span>
+        <span>Gestion des affiliés</span><span class="msep">✦</span>
+        <span>Ventes omnicanal</span><span class="msep">✦</span>
+        <span>Inventaire</span><span class="msep">✦</span>
+        <span>Rapports</span><span class="msep">✦</span>
+        <span>Utilitaires</span><span class="msep">✦</span>
+        <span>Support &amp; prospects</span><span class="msep">✦</span>
+      </div>
+    </div>
+
+    <!-- =================== POURQUOI =================== -->
+    <section id="pourquoi" class="section section-alt">
+      <div class="container">
+        <header class="section-head">
+          <span class="eyebrow">Pourquoi GoCRM</span>
+          <p class="statement reveal">Manage. <span class="statement-accent">Grow<svg class="statement-arrow" viewBox="0 0 40 40" aria-hidden="true"><path d="M6 30 L18 18 L23 23 L34 8" stroke="currentColor" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M26 8h8v8" stroke="currentColor" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span> Succeed.</p>
+          <p class="section-head-sub">Trois promesses, un seul outil. Une plateforme conçue autour de la façon dont les PME travaillent réellement.</p>
+        </header>
+
+        <div class="cards-3">
+          <article class="card card-why reveal">
+            <div class="card-ico">
+              <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2" stroke="currentColor" stroke-width="1.8" fill="none"/><path d="M3 9h18M8 4v16" stroke="currentColor" stroke-width="1.8" fill="none"/></svg>
+            </div>
+            <h3>Manage — Centralisez</h3>
+            <p>Clients, devis, factures, stock, projets, tâches. Toutes vos données sur une même plateforme, plus jamais éparpillées entre fichiers Excel et boîtes mail.</p>
+          </article>
+          <article class="card card-why reveal">
+            <div class="card-ico">
+              <svg viewBox="0 0 24 24"><path d="M4 20L20 4M20 4H10M20 4v10" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Grow — Convertissez</h3>
+            <p>Suivez chaque prospect jusqu'à la facture payée. Devis, bons de commande, règlements et abonnements récurrents : le cycle de vente complet, sans rupture.</p>
+          </article>
+          <article class="card card-why reveal">
+            <div class="card-ico">
+              <svg viewBox="0 0 24 24"><path d="M12 2l3 7h7l-5.5 4 2 8L12 17l-6.5 4 2-8L2 9h7z" stroke="currentColor" stroke-width="1.8" fill="none" stroke-linejoin="round"/></svg>
+            </div>
+            <h3>Succeed — Décidez vite</h3>
+            <p>Rapports clairs sur les ventes, dépenses, prospects et articles. Des décisions rapides, basées sur des chiffres réels — pas sur une intuition.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== MODULES =================== -->
+    <section id="modules" class="section">
+      <div class="container">
+        <header class="section-head-split reveal">
+          <div class="shs-copy">
+            <span class="eyebrow">Modules</span>
+            <h2>Une plateforme, dix modules intégrés</h2>
+            <p>Tout ce dont une PME a besoin pour gérer son quotidien — sans jongler entre dix logiciels.</p>
+          </div>
+          <div class="shs-num" aria-hidden="true">
+            <span>10</span>
+            <small>modules<br/>intégrés</small>
+          </div>
+        </header>
+
+        <div class="modules-grid">
+          <article class="module reveal">
+            <div class="module-ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3 10h18M8 4v16" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></div>
+            <h3>Tableau de bord</h3>
+            <p>Factures en attente, prospects convertis, projets en cours, tâches et todos — d'un seul coup d'œil.</p>
+          </article>
+          <article class="module reveal">
+            <div class="module-ico"><svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M9 12h6M9 16h6M9 8h3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+            <h3>Commercial</h3>
+            <p>Offres, devis, bons de commande, factures, notes de livraison, règlements, notes de crédit, catalogue d'articles.</p>
+          </article>
+          <article class="module reveal">
+            <div class="module-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+            <h3>Clients & abonnements</h3>
+            <p>Fiches clients, abonnements récurrents et gestion des contrats — la relation dans la durée.</p>
+          </article>
+          <article class="module reveal">
+            <div class="module-ico"><svg viewBox="0 0 24 24"><path d="M4 6h16v4H4zM4 14h10v4H4z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></div>
+            <h3>Projets & tâches</h3>
+            <p>Suivi d'avancement, gestion des tâches et coordination des équipes en temps réel.</p>
+          </article>
+          <article class="module reveal">
+            <div class="module-ico"><svg viewBox="0 0 24 24"><circle cx="7" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="16" r="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10 8h4a3 3 0 013 3v2" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></div>
+            <h3>Gestion des affiliés</h3>
+            <p>Dashboard dédié, groupes d'affiliés, referrals, commissions et paiements automatisés.</p>
+          </article>
+          <article class="module reveal">
+            <div class="module-ico"><svg viewBox="0 0 24 24"><path d="M3 7h18l-2 12H5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M8 7V5a4 4 0 018 0v2" fill="none" stroke="currentColor" stroke-width="1.8"/></svg></div>
+            <h3>Ventes omnicanal</h3>
+            <p>Commandes, canaux de vente, remises, POS et portail client — vendre partout, centraliser ici.</p>
+          </article>
+          <article class="module reveal">
+            <div class="module-ico"><svg viewBox="0 0 24 24"><path d="M3 8l9-5 9 5-9 5z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M3 8v8l9 5 9-5V8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+            <h3>Inventaire</h3>
+            <p>Articles, réceptions et exports, colisage, dépôts, pertes et retours — un stock toujours juste.</p>
+          </article>
+          <article class="module reveal">
+            <div class="module-ico"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+            <h3>Rapports</h3>
+            <p>Ventes, dépenses vs. ventes, prospects, présences, articles/FAQ — analyses prêtes à lire.</p>
+          </article>
+          <article class="module reveal">
+            <div class="module-ico"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5l3 3" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+            <h3>Utilitaires</h3>
+            <p>Médiathèque, exports PDF/CSV, calendrier, annonces, objectifs, journal d'activité, sondages, e-invoice.</p>
+          </article>
+          <article class="module reveal">
+            <div class="module-ico"><svg viewBox="0 0 24 24"><path d="M21 12a8 8 0 01-11.5 7.2L4 21l1.8-5.5A8 8 0 1121 12z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+            <h3>Support & prospects</h3>
+            <p>Demandes de support, suivi des leads et demandes de devis — jamais un client oublié.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== APERCU DASHBOARD =================== -->
+    <section id="apercu" class="section section-dark">
+      <div class="container">
+        <header class="section-head section-head-light">
+          <span class="eyebrow">Aperçu</span>
+          <h2>Une interface pensée pour aller vite</h2>
+          <p>Un espace de travail unifié. Chaque module est à un clic — chaque décision, à portée de regard.</p>
+        </header>
+
+        <div class="preview reveal">
+          <aside class="preview-sidebar">
+            <div class="preview-brand">
+              <span class="preview-logo"></span> GoCRM
+            </div>
+            <ul>
+              <li class="active"><span></span>Tableau de bord</li>
+              <li><span></span>Commercial</li>
+              <li><span></span>Clients & abonnements</li>
+              <li><span></span>Projets & tâches</li>
+              <li><span></span>Affiliés</li>
+              <li><span></span>Ventes omnicanal</li>
+              <li><span></span>Inventaire</li>
+              <li><span></span>Rapports</li>
+              <li><span></span>Utilitaires</li>
+              <li><span></span>Support & prospects</li>
+            </ul>
+          </aside>
+
+          <div class="preview-main">
+            <div class="preview-topbar">
+              <div class="search">Rechercher un client, une facture…</div>
+              <div class="avatar"></div>
+            </div>
+
+            <div class="preview-kpis">
+              <div class="pk"><span>Factures en attente</span><strong>17</strong><em class="up">+3</em></div>
+              <div class="pk"><span>Devis envoyés</span><strong>42</strong><em class="up">+11</em></div>
+              <div class="pk"><span>Nouveaux prospects</span><strong>96</strong><em class="up">+22</em></div>
+              <div class="pk"><span>Chiffre d'affaires</span><strong>412K</strong><em class="up">+18%</em></div>
+            </div>
+
+            <div class="preview-row">
+              <div class="preview-chart">
+                <div class="pc-head">
+                  <span>Ventes — 7 derniers jours</span>
+                  <span class="pc-trend">
+                    <svg viewBox="0 0 24 24"><path d="M4 20L20 4M20 4H10M20 4v10" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+                    +24%
+                  </span>
+                </div>
+                <div class="bars">
+                  <span style="--h:35%"></span>
+                  <span style="--h:52%"></span>
+                  <span style="--h:44%"></span>
+                  <span style="--h:68%"></span>
+                  <span style="--h:60%"></span>
+                  <span style="--h:82%"></span>
+                  <span style="--h:95%"></span>
+                </div>
+              </div>
+
+              <div class="preview-table">
+                <div class="pt-head">Dernières factures</div>
+                <div class="pt-row"><span>#2041 · Atlas SARL</span><span class="tag paid">Payée</span></div>
+                <div class="pt-row"><span>#2040 · Zenith Print</span><span class="tag pending">En attente</span></div>
+                <div class="pt-row"><span>#2039 · Nova Retail</span><span class="tag paid">Payée</span></div>
+                <div class="pt-row"><span>#2038 · Cedar Group</span><span class="tag late">En retard</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== POSITIONNEMENT =================== -->
+    <section class="section section-alt giant-word-section">
+      <span class="giant-word" aria-hidden="true">GROW</span>
+      <div class="container">
+        <div class="split">
+          <div class="split-copy reveal">
+            <span class="eyebrow">Positionnement</span>
+            <h2>CRM + ERP, sans la complexité de l'un ni de l'autre.</h2>
+            <p>La plupart des outils CRM oublient la logistique. La plupart des ERP demandent une équipe IT. GoCRM réunit les deux mondes dans une interface pensée pour les équipes qui n'ont ni le temps ni les ressources pour tout paramétrer.</p>
+            <ul class="check-list">
+              <li>Prêt à l'emploi — les modules essentiels sont déjà activés.</li>
+              <li>Adapté au marché francophone et aux besoins locaux.</li>
+              <li>Évolutif — activez seulement ce dont vous avez besoin.</li>
+            </ul>
+          </div>
+          <div class="split-visual reveal">
+            <div class="stacked-card sc1">
+              <span class="sc-label">Devis</span>
+              <span class="sc-val">DEV-0184</span>
+              <span class="sc-tag">Envoyé</span>
+            </div>
+            <div class="stacked-card sc2">
+              <span class="sc-label">Facture</span>
+              <span class="sc-val">FAC-2041</span>
+              <span class="sc-tag paid">Payée</span>
+            </div>
+            <div class="stacked-card sc3">
+              <span class="sc-label">Stock</span>
+              <span class="sc-val">Dépôt Casa · 1 248 réf.</span>
+              <span class="sc-tag">À jour</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== DEMARRER =================== -->
+    <section class="section">
+      <div class="container">
+        <header class="section-head section-head-start">
+          <span class="eyebrow">Comment démarrer</span>
+          <h2>Trois étapes, pas trois mois</h2>
+        </header>
+
+        <ol class="steps">
+          <li class="reveal">
+            <span class="step-num">01</span>
+            <h3>Créez votre compte</h3>
+            <p>Inscription en quelques minutes. Aucune installation, aucun serveur à configurer.</p>
+          </li>
+          <li class="reveal">
+            <span class="step-num">02</span>
+            <h3>Configurez vos modules</h3>
+            <p>Activez les modules qui correspondent à votre activité : commercial, inventaire, projets, POS…</p>
+          </li>
+          <li class="reveal">
+            <span class="step-num">03</span>
+            <h3>Suivez votre croissance</h3>
+            <p>Rapports clairs, tableaux de bord temps réel — pilotez chaque décision avec des chiffres réels.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- =================== FAQ =================== -->
+    <section id="faq" class="section section-alt">
+      <div class="container container-narrow">
+        <header class="section-head">
+          <span class="eyebrow">FAQ</span>
+          <h2>Questions fréquentes</h2>
+        </header>
+
+        <!-- Native <details class="reveal">/<summary> — CSS-only accordion, no JS. -->
+        <div class="faq">
+          <details class="reveal">
+            <summary>GoCRM est-il basé sur le cloud ?<span class="chev" aria-hidden="true"></span></summary>
+            <p>Oui. GoCRM est une plateforme 100% cloud, accessible depuis un navigateur, sans installation ni serveur à maintenir de votre côté.</p>
+          </details>
+          <details class="reveal">
+            <summary>Puis-je gérer mon inventaire dans GoCRM ?<span class="chev" aria-hidden="true"></span></summary>
+            <p>Absolument. Le module Inventaire couvre les articles, les réceptions/exports, le colisage, les dépôts, les pertes et les retours.</p>
+          </details>
+          <details class="reveal">
+            <summary>Puis-je générer des factures et des devis ?<span class="chev" aria-hidden="true"></span></summary>
+            <p>Oui. Le module Commercial gère offres, devis, bons de commande, factures, notes de livraison, règlements et notes de crédit.</p>
+          </details>
+          <details class="reveal">
+            <summary>Plusieurs utilisateurs sont-ils supportés ?<span class="chev" aria-hidden="true"></span></summary>
+            <p>Oui. GoCRM est multi-utilisateurs avec gestion des rôles et journal d'activité pour suivre chaque action.</p>
+          </details>
+          <details class="reveal">
+            <summary>Y a-t-il un support client ?<span class="chev" aria-hidden="true"></span></summary>
+            <p>Oui. Un module Support intégré permet d'ouvrir des tickets et de suivre vos demandes directement depuis la plateforme.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== CTA FINAL =================== -->
+    <section id="cta" class="cta-band">
+      <div class="container cta-inner">
+        <div>
+          <h2>Prêt à faire grandir votre entreprise ?</h2>
+          <p>Découvrez GoCRM en conditions réelles avec une démo personnalisée.</p>
+        </div>
+        <div class="cta-actions">
+          <a href="mailto:contact@gocrm.ma?subject=Demande%20de%20d%C3%A9mo%20GoCRM" class="btn btn-primary btn-lg">Demander une démo</a>
+          <a href="mailto:contact@gocrm.ma?subject=Demande%20de%20devis%20GoCRM" class="btn btn-ghost-light btn-lg">Demander un devis</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =================== FOOTER =================== -->
+  <footer class="site-footer">
+    <span class="footer-wordmark" aria-hidden="true">GoCRM</span>
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="logo.png" alt="GoCRM" class="footer-logo" />
+        <p>Manage. Grow. Succeed.<br/>La plateforme CRM + ERP pensée pour les PME.</p>
+      </div>
+      <div>
+        <h4>Produit</h4>
+        <ul>
+          <li><a href="#pourquoi">Pourquoi GoCRM</a></li>
+          <li><a href="#apercu">Aperçu</a></li>
+          <li><a href="#cta">Démo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Modules</h4>
+        <ul>
+          <li><a href="#modules">Commercial</a></li>
+          <li><a href="#modules">Inventaire</a></li>
+          <li><a href="#modules">Rapports</a></li>
+          <li><a href="#modules">Support</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Entreprise</h4>
+        <ul>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#cta">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:contact@gocrm.ma">contact@gocrm.ma</a></li>
+          <li><a href="tel:+212600000000">+212 6 00 00 00 00</a></li>
+          <li>Maroc &amp; marché francophone</li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-base">
+      <span>© 2026 GoCRM. Tous droits réservés.</span>
+      <span>Fait avec soin pour les PME francophones.</span>
+    </div>
+  </footer>
+</body>
+</html>
