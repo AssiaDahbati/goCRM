@@ -143,6 +143,12 @@ p{color:var(--muted)}
 .btn-lg{padding:1.05rem 1.7rem;font-size:1rem}
 .btn-primary{background:var(--orange);color:#fff;box-shadow:0 8px 20px -8px rgba(253,83,32,.6)}
 .btn-primary:hover{background:var(--orange-2);transform:translateY(-2px);box-shadow:0 14px 28px -10px rgba(253,83,32,.7)}
+.hero-ctas .btn-primary{animation:ctaPulse 3.2s ease-in-out 1.6s infinite}
+.hero-ctas .btn-primary:hover{animation-play-state:paused}
+@keyframes ctaPulse{
+  0%,100%{box-shadow:0 8px 20px -8px rgba(253,83,32,.6)}
+  50%{box-shadow:0 8px 20px -8px rgba(253,83,32,.6), 0 0 0 7px rgba(253,83,32,.12)}
+}
 .btn-ghost{border:1.5px solid var(--navy);color:var(--navy);background:transparent}
 .btn-ghost:hover{background:var(--navy);color:#fff}
 .btn-ghost-light{border:1.5px solid rgba(255,255,255,.35);color:#fff;background:transparent}
@@ -220,13 +226,79 @@ p{color:var(--muted)}
   100%{transform:translate(30px,-25px)}
 }
 
-.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:var(--s-6);align-items:center;position:relative;z-index:1;margin-top:var(--s-5)}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:var(--s-6);align-items:start;position:relative;z-index:1;margin-top:var(--s-5)}
 
-.hero-top{animation:rise .7s ease .05s both}
+/* Right column group: a real photo is the hero's main visual, with small
+   floating chips carrying real product signal (not a full dashboard mock).
+   Entrance animation lives on .hero-visual (the wrapper) so .hero-photo itself
+   is free to use a plain :hover transform with no competing animation. */
+.hero-visual{display:flex;flex-direction:column;align-items:center;animation:rise .8s ease .1s both}
+.hero-photo{
+  width:100%;max-width:560px;margin:0;border-radius:var(--r-lg);
+  overflow:hidden;box-shadow:var(--sh-lg);border:1px solid var(--line);
+  position:relative;aspect-ratio:4/3.35;
+  transition:transform .45s ease, box-shadow .45s ease;
+  animation:heroPhotoRise .8s ease .2s both, heroPhotoFloat 7s ease-in-out 1s infinite;
+}
+@keyframes heroPhotoRise{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@keyframes heroPhotoFloat{50%{transform:translateY(-9px)}}
+.hero-photo:hover{animation-play-state:paused;transform:translateY(-5px) rotate(-.3deg);box-shadow:0 34px 64px -18px rgba(1,17,52,.4)}
+.hero-photo img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  animation:kenBurns 16s ease-in-out infinite alternate;
+}
+@keyframes kenBurns{from{transform:scale(1) translate(0,0)}to{transform:scale(1.08) translate(-1%,-1%)}}
+.hero-photo::after{
+  /* subtle brand-color wash so a stock photo reads as part of this palette, not a random insert */
+  content:"";position:absolute;inset:0;z-index:0;
+  background:linear-gradient(160deg, rgba(1,17,52,.34), rgba(253,83,32,.12) 55%, transparent 100%);
+  mix-blend-mode:multiply;pointer-events:none;
+}
+.hero-photo::before{
+  /* periodic light sweep across the photo */
+  content:"";position:absolute;top:0;left:-60%;width:35%;height:100%;z-index:1;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.4),transparent);
+  transform:skewX(-18deg);pointer-events:none;
+  animation:shine 5.5s ease-in-out infinite 1.6s;
+}
+@keyframes shine{0%,30%{left:-60%}58%,100%{left:130%}}
+
+.photo-chip{
+  position:absolute;z-index:2;background:#fff;border-radius:var(--r-md);
+  box-shadow:0 14px 30px -10px rgba(1,17,52,.35);
+  font-size:.82rem;font-weight:600;color:var(--navy);
+  animation:chipFade .5s ease both, float 6s ease-in-out infinite;
+}
+@keyframes chipFade{from{opacity:0}to{opacity:1}}
+.chip-top{
+  top:1rem;left:1rem;padding:.5rem .8rem;
+  display:flex;align-items:center;gap:.45rem;
+  animation-delay:.85s, 1.35s;
+}
+.chip-bottom{
+  right:1rem;bottom:1rem;left:1rem;padding:.75rem .9rem;
+  display:flex;align-items:center;gap:.6rem;
+  animation-delay:1s, 1.5s;
+}
+.chip-bottom svg{width:20px;height:20px;color:#0f8a4d;flex-shrink:0}
+.chip-bottom strong{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.05rem;color:var(--navy)}
+.chip-bottom span{display:block;font-size:.72rem;font-weight:500;color:var(--muted)}
+@media (max-width:520px){
+  .chip-top{font-size:.72rem;padding:.4rem .65rem}
+  .chip-bottom{padding:.6rem .75rem}
+  .chip-bottom strong{font-size:.95rem}
+}
+@media (hover:none){
+  .hero-photo:hover{transform:none;box-shadow:var(--sh-lg)}
+}
+
 .hero-copy > *{animation:rise .8s ease both}
-.hero-copy .hero-lead{animation-delay:.58s}
-.hero-copy .hero-ctas{animation-delay:.7s}
-.hero-copy .hero-stats{animation-delay:.82s}
+.hero-copy .hero-top{animation-delay:0s}
+.hero-copy .hero-kicker{animation-delay:.14s}
+.hero-copy .hero-h1{animation-delay:.26s}
+.hero-copy .hero-lead{animation-delay:.5s}
+.hero-copy .hero-ctas{animation-delay:.62s}
+.hero-copy .hero-stats{animation-delay:.74s}
 @keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 
 .pill{
@@ -235,6 +307,11 @@ p{color:var(--muted)}
   background:#fff;border:1px solid var(--line);
   font-size:.82rem;color:var(--navy);font-weight:500;
   box-shadow:var(--sh-sm);
+  animation:pillGlow 3.5s ease-in-out infinite;
+}
+@keyframes pillGlow{
+  0%,100%{box-shadow:var(--sh-sm)}
+  50%{box-shadow:var(--sh-sm), 0 0 0 6px rgba(253,83,32,.08)}
 }
 .pill-dot{width:8px;height:8px;border-radius:50%;background:var(--orange);box-shadow:0 0 0 4px rgba(253,83,32,.18);animation:pulse 2s ease-in-out infinite}
 @keyframes pulse{50%{box-shadow:0 0 0 8px rgba(253,83,32,0)}}
@@ -252,14 +329,14 @@ p{color:var(--muted)}
   display:flex;align-items:center;gap:.4rem;
   font-size:.8rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
   color:var(--orange);margin:var(--s-3) 0 .6rem;
-  animation:kickerFade .6s ease .05s both;
+  animation:kickerFade .6s ease both;
 }
 .hero-kicker svg{width:13px;height:13px}
 @keyframes kickerFade{from{opacity:0}to{opacity:1}}
 .hero-h1{
   font-size:var(--fs-hero);line-height:1.04;letter-spacing:-.02em;
   max-width:780px;margin:0 0 var(--s-4);
-  animation:heroH1Rise .8s cubic-bezier(.16,1,.3,1) .16s both;
+  animation:heroH1Rise .8s cubic-bezier(.16,1,.3,1) both;
 }
 @keyframes heroH1Rise{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 

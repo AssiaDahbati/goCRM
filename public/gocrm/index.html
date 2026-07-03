@@ -70,20 +70,20 @@
       <div class="glow glow-b" aria-hidden="true"></div>
 
       <div class="container">
-        <div class="hero-top">
-          <span class="pill">
-            <span class="pill-dot"></span> CRM + ERP · Sans complexité
-          </span>
-        </div>
-
-        <p class="hero-kicker">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17L17 4M17 4H9M17 4v8" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          Manage · Grow · Succeed
-        </p>
-        <h1 class="hero-h1">Piloter votre entreprise depuis un seul écran.</h1>
-
         <div class="hero-grid">
           <div class="hero-copy">
+            <div class="hero-top">
+              <span class="pill">
+                <span class="pill-dot"></span> CRM + ERP · Sans complexité
+              </span>
+            </div>
+
+            <p class="hero-kicker">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 17L17 4M17 4H9M17 4v8" stroke="currentColor" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Manage · Grow · Succeed
+            </p>
+            <h1 class="hero-h1">Piloter votre entreprise depuis un seul écran.</h1>
+
             <p class="hero-lead">
               GoCRM réunit vos ventes, votre facturation, votre inventaire et vos projets
               dans une seule plateforme claire — pensée pour les PME et les freelances,
@@ -105,70 +105,26 @@
             </ul>
           </div>
 
-          <!-- CSS-only dashboard mock — a supporting glimpse, not the hero's main character -->
-          <div class="hero-dash" aria-hidden="true">
-            <div class="dash-card dash-main">
-              <div class="dash-head">
-                <div class="dash-title">
-                  <span class="dot dot-live"></span>
-                  Tableau de bord
-                </div>
-                <div class="dash-tabs">
-                  <span class="tab active">Aujourd'hui</span>
-                  <span class="tab">7j</span>
-                  <span class="tab">30j</span>
-                </div>
+          <!-- Right column: a real photo is the hero's main visual now — humanizes
+               the product. Small floating chips overlay it with real product
+               signal (revenue trend, live status) instead of a full dashboard mock. -->
+          <div class="hero-visual">
+            <figure class="hero-photo">
+              <img src="https://images.unsplash.com/photo-1758873268745-dd2cf0d677b5?auto=format&amp;fit=crop&amp;w=1100&amp;h=850&amp;q=80"
+                   alt="Équipe travaillant ensemble autour d'un ordinateur au bureau" loading="lazy" />
+
+              <div class="photo-chip chip-top">
+                <span class="dot dot-live"></span> En ligne · Tableau de bord live
               </div>
 
-              <div class="dash-kpis">
-                <div class="kpi">
-                  <span class="kpi-label">Revenus</span>
-                  <span class="kpi-value">128 450 <em>DH</em></span>
-                  <span class="kpi-trend up">
-                    <svg viewBox="0 0 24 24"><path d="M4 20L20 4M20 4H10M20 4v10" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
-                    +18,2%
-                  </span>
-                </div>
-                <div class="kpi">
-                  <span class="kpi-label">Prospects convertis</span>
-                  <span class="kpi-value">64</span>
-                  <span class="kpi-trend up">
-                    <svg viewBox="0 0 24 24"><path d="M4 20L20 4M20 4H10M20 4v10" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
-                    +9,4%
-                  </span>
+              <div class="photo-chip chip-bottom">
+                <svg viewBox="0 0 24 24"><path d="M4 20L20 4M20 4H10M20 4v10" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round"/></svg>
+                <div>
+                  <strong>+18,2%</strong>
+                  <span>de revenus ce mois</span>
                 </div>
               </div>
-
-              <!-- Ascending line chart (signature motif) built with clip-path -->
-              <div class="chart">
-                <div class="chart-grid">
-                  <span></span><span></span><span></span><span></span>
-                </div>
-                <div class="chart-area"></div>
-                <div class="chart-line"></div>
-                <div class="chart-dot"></div>
-              </div>
-            </div>
-
-            <div class="dash-card dash-side">
-              <div class="side-title">Projets en cours</div>
-              <div class="project-row"><span>Migration ERP</span><span>72%</span></div>
-              <div class="bar"><div class="bar-fill" style="--w:72%"></div></div>
-              <div class="project-row"><span>Refonte catalogue</span><span>45%</span></div>
-              <div class="bar"><div class="bar-fill" style="--w:45%"></div></div>
-              <div class="project-row"><span>Campagne Q3</span><span>88%</span></div>
-              <div class="bar"><div class="bar-fill" style="--w:88%"></div></div>
-            </div>
-
-            <div class="dash-card dash-badge">
-              <div class="badge-icon">
-                <svg viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              <div>
-                <div class="badge-title">Facture #2041 payée</div>
-                <div class="badge-sub">il y a 2 min · 4 800 DH</div>
-              </div>
-            </div>
+            </figure>
           </div>
         </div>
       </div>
